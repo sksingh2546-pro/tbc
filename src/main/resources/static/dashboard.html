@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Medicine Stock</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="libs/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="libs/toastify.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="getDashboardData">
+<nav style="border-bottom:1px solid #333 ;">
+    <h6 class="float-left">Things Board</h6>
+    <button class="btn float-right my-1 mr-3" style="color: #fff;border-radius:20px;font-family: Calibri;"
+            onclick="location.href='login.html'"
+    >
+        <b>Logout<i class="fas fa-sign-out-alt ml-2"></i></b>
+    </button>
+</nav>
+<div class="sideNavbar" style="max-height:100%;overflow-y:auto">
+    <ul>
+        <li class="sideActive">
+            <a href="dashboard.html">
+                <i class="fas fa-chart-network mr-2"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li class="header" style="line-height:60%">
+            <span>Licencing</span>
+        </li>
+        <li class>
+            <a href="index.html">
+                <i class="fas fa-prescription-bottle-alt mr-2"></i>
+                <span style="line-height:5%;font-size:13px;">Activate Licence</span>
+            </a>
+        </li>
+        <li class>
+            <a href="updateLicence.html">
+                <i class="fas fa-store mr-2"></i>
+                <span>Update Licence</span>
+            </a>
+        </li>
+        <li class>
+            <a href="deleteLicence.html">
+                <i class="fas fa-list-ul mr-2"></i>
+                <span>Delete Licence</span>
+            </a>
+        </li>
+
+
+    </ul>
+</div>
+<div class="wrapper py-1">
+    <div class="container-fluid">
+        <div class="row py-3">
+            <div class="col-sm-6" style="border-right:1px solid #ddd">
+                <h3  class="font-weight-bold text-center">IN</h3>
+                <div style="display:flex">
+                    <div class="smallBox in shadow-sm">
+                        <div><h5>Today's <br>Stock</h5><img src="stock.svg" height="30px"> </div>
+                        <div><h5 id="todaySTCount"></h5></div>
+                    </div>
+                    <div class="smallBox in shadow-sm">
+                        <div><h5>Total <br>Stock</h5><img src="stock.svg" height="30px"> </div>
+                        <div><h5 id="totalSTCount"></h5></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h3 class="font-weight-bold text-center">OUT</h3>
+                <div style="display:flex">
+                    <div class="smallBox out shadow-sm">
+                        <div><h5>Today's <br>Out</h5><img src="proIN.svg" height="30px"> </div>
+                        <div><h5 id="todayPTCount"></h5></div>
+                    </div>
+                    <div class="smallBox out shadow-sm">
+                        <div><h5>Total <br>Out</h5><img src="proIN.svg" height="30px"> </div>
+                        <div><h5 id="totalPTCount"></h5></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="orderPlace p-4" style="border-top:1px solid #ddd">
+    <h3 class="text-center my-2">Place Order</h3>
+    <div class="table-responsive">
+        <table class="myTable">
+            <thead>
+            <tr>
+                <th>Sr No.</th>
+                <th>Vendor Name</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Check</th>
+            </tr>
+            </thead>
+            <tbody id="orderTable">
+
+            </tbody>
+        </table>
+    </div>
+    <button class="myBtn float-right bg-theme text-light font-weight-bold" onclick="insertOrder()"> Make Order </button>
+
+</div>
+<script src="script.js"></script>
+<script src="newapi.js"></script>
+<script src="api.js"></script>
+<script src="threshold.js"></script>
+<script src="increase.js"></script>
+<script src="index.js"></script>
+<!--    <script src="newThreshold.js"></script>-->
+<!--<script type="text/javascript" src="libs/toastify.js"></script>-->
+<script type="text/javascript" src="libs/toastify.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Medicine Stock</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="libs/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="libs/toastify.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="getUpdateLicence()">
+<nav style="border-bottom:1px solid #333 ;">
+    <h6 class="float-left">Things board</h6>
+    <button class="btn float-right my-1 mr-3" style="color: #fff;border-radius:20px;font-family: Calibri;"
+            onclick="location.href='login.html'"
+    >
+        <b>Logout<i class="fas fa-sign-out-alt ml-2"></i></b>
+    </button>
+</nav>
+<div class="sideNavbar" style="max-height:100%;overflow-y:auto">
+<!--    <ul>
+        <li class="sideActive">
+            <a href="index.html">
+                <i class="fas fa-chart-network mr-2"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li class="header" style="line-height:60%">
+            <span>Licencing</span>
+        </li>
+        <li class>
+            <a href="index.html">
+                <i class="fas fa-prescription-bottle-alt mr-2"></i>
+                <span style="line-height:5%;font-size:13px;">Activate Licence</span>
+            </a>
+        </li>
+        <li class>
+            <a href="updateLicence.html">
+                <i class="fas fa-store mr-2"></i>
+                <span>Update Licence</span>
+            </a>
+        </li>
+        <li class>
+            <a href="deleteLicence.html">
+                <i class="fas fa-list-ul mr-2"></i>
+                <span>Delete Licence</span>
+            </a>
+        </li>
+
+
+    </ul>-->
+</div>
+<div class="wrapper py-4">
+    <div class="container-fluid">
+        <div class="myBox" style="width: auto;">
+            <h4 class="mb-3">Today Stock</h4>
+            <div class="table-responsive">
+                <table class="myTable">
+                    <thead>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Licence code</th>
+                        <th>Frequency</th>
+                        <th>No. of Devices</th>
+
+
+                    </tr>
+                    </thead>
+                    <tbody id="todayStockTable">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="user.js"></script>
+<script type="text/javascript" src="libs/toastify.js"></script>
+</body>
+
+</html>
