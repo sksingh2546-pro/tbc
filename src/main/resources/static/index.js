@@ -43,7 +43,7 @@ function addBarcode(){
                       }
                  }
             };
-            xhttp.open("POST","http://localhost:8090/insertUserCredentials", true);
+            xhttp.open("POST","http://localhost:9090/insertUserCredentials", true);
             xhttp.setRequestHeader("Content-type", "application/json");
             XHR.setRequestHeader("Authorization", "Bearer "+localStorage.getItem("token"));
             xhttp.send(JSON.stringify(temp));

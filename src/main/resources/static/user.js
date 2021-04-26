@@ -29,7 +29,7 @@ function getUpdateLicence() {
             }
         }
     };
-    xhttp.open("GET", "http://localhost:8090/getTotalLicencingList", true);
+    xhttp.open("GET", "http://localhost:9090/getTotalLicencingList", true);
      XHR.setRequestHeader("Authorization", "Bearer "+localStorage.getItem("token"));
     xhttp.send();
 }

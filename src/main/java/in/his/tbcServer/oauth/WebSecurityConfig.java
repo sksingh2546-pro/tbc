@@ -69,6 +69,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/sign.html").permitAll()
                 .antMatchers("/sign.js").permitAll()
                 .antMatchers("/favicon.ico").permitAll()
+                .antMatchers("/vendor/*/*/*").permitAll()
+                .antMatchers("/vendor/*").permitAll()
+                .antMatchers("/vendor/*/*").permitAll()
+                .antMatchers("/images/*").permitAll()
+                .antMatchers("/main.js").permitAll()
+                .antMatchers("/updateLicence.html").permitAll()
+                .antMatchers("/updateLicence.js").permitAll()
+                .antMatchers("/deleteLicence.html").permitAll()
+                .antMatchers("/deleteLicence.js").permitAll()
+                .antMatchers("/user.js").permitAll()
+
 
                 // all other requests need to be authenticated
                 .anyRequest().authenticated().and().
